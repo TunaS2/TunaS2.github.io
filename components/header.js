@@ -1,19 +1,15 @@
-class Header extends HTMLElement {
-    constructor()
-    {
-        super();
-    }
-    connectedCallback() {
-        this.innerHTML = `
-          <style>
+const headerTemplate = document.createElement('template');
+headerTemplate.innerHTML = `
+<style>
 .header {
   width: 100%;
-  background-color: white;
+  background:rgba(255, 255, 255, 0.22) ;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
+  transition:background 0.5s ease;
 }
 
 .header-container {
@@ -57,7 +53,7 @@ class Header extends HTMLElement {
 
 .nav-menu a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -67,7 +63,7 @@ class Header extends HTMLElement {
 }
 
 .nav-menu a:hover {
-  color: #9a8a78;
+  color:rgb(0, 0, 0);
 }
 
 .nav-menu a.active {
@@ -81,7 +77,7 @@ class Header extends HTMLElement {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: black;
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   z-index: 1;
@@ -102,7 +98,7 @@ class Header extends HTMLElement {
 }
 
 .dropdown-content a:hover {
-  background-color: #f9f9f9;
+  background-color:#f9f9f9;
 }
 
 @media screen and (max-width: 768px) {
@@ -117,7 +113,6 @@ class Header extends HTMLElement {
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: white;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     padding: 20px;
   }
@@ -136,16 +131,8 @@ class Header extends HTMLElement {
     padding-left: 20px;
   }
 }
-
-.content {
-  margin-top: 80px;
-  padding: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
           </style>
-          <header class="header">
+    <header class="header">
       <div class="header-container">
         <a href="/" class="logo">
           <img src="/api/placeholder/200/80" alt="Fishbowl Logo" />
@@ -154,7 +141,6 @@ class Header extends HTMLElement {
         <button class="nav-toggle" id="navToggle">☰</button>
         
         <ul class="nav-menu" id="navMenu">
-          <li><a href="/" class="active">Home</a></li>
           <li class="dropdown">
             <a href="#">Projects</a>
             <div class="dropdown-content">
@@ -166,11 +152,19 @@ class Header extends HTMLElement {
         </ul>
       </div>
     </header>
-        `;
-      }
-    
-}
+    `;
 
+
+class Header extends HTMLElement {
+    constructor()
+    {
+        super();
+    }
+    connectedCallback() {
+        const shadowRoot = this.attachShadow({mode:'closed'});
+        shadowRoot.appendChild(headerTemplate.content);
+    }
+}
 
 customElements.define('header-component',Header);
 
