@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-main{
-  background-color: antiquewhite;
-  height: 400vh;
+main {
+  background-color: rgb(11, 11, 11);
 }
-main img{
-  width:100%;
-  margin: -100px 0 auto;
+main img {
+  width: 100%;
+  margin: -100px 0 -70px;
+  height: auto;
 }

@@ -1,4 +1,4 @@
-const footerTemplate = document.createElement('template');
+const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
 <style>
         footer {
@@ -8,9 +8,12 @@ footerTemplate.innerHTML = `
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: #dfdfe2;
+          color: white;
+          z-index:1000;
+          font-family: "Audiowide", sans-serif;
+          font-weight: 400;
+          font-style: normal;
         }
-
         ul li {
           list-style: none;
           display: inline;
@@ -21,7 +24,9 @@ footerTemplate.innerHTML = `
           color: inherit;
           text-decoration: none;
         }
-
+        p{
+          padding-left: 20px;
+        }
         a:hover {
           padding-bottom: 5px;
           box-shadow: inset 0 -2px 0 0 #333;
@@ -40,18 +45,13 @@ footerTemplate.innerHTML = `
         }
       </style>
       <footer>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <p> &#169; 2025 </p>
         <ul class="social-row">
-          <li><a href="#"><img src="imgs/github.png"></a></li>
+          <li><a href="#"><img src="imgs/github2.png"></a></li>
           <li><a href="#"><img src="imgs/linkedin.png"></a></li>
         </ul>
       </footer>
     `;
-
 
 class Footer extends HTMLElement {
   constructor() {
@@ -59,9 +59,9 @@ class Footer extends HTMLElement {
   }
 
   connectedCallback() {
-    const shadowRoot = this.attachShadow({mode:'closed'});
+    const shadowRoot = this.attachShadow({ mode: "closed" });
     shadowRoot.appendChild(footerTemplate.content);
   }
 }
 
-customElements.define('footer-component', Footer);
+customElements.define("footer-component", Footer);

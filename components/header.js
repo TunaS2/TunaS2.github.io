@@ -1,15 +1,18 @@
-const headerTemplate = document.createElement('template');
+const headerTemplate = document.createElement("template");
 headerTemplate.innerHTML = `
 <style>
+
 .header {
   width: 100%;
-  background:rgba(255, 255, 255, 0.22) ;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background:rgba(62, 8, 95, 0.23) ;
+  box-shadow: 0 2px 10px rgba(155, 39, 190, 0.47);
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
-  transition:background 0.5s ease;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header-container {
@@ -19,6 +22,9 @@ headerTemplate.innerHTML = `
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+}
+.center {
+  width:50%;
 }
 
 .logo {
@@ -31,6 +37,7 @@ headerTemplate.innerHTML = `
 .logo img {
   height: 40px;
   width: auto;
+  border-radius: 50%;
 }
 
 .nav-toggle {
@@ -44,10 +51,11 @@ headerTemplate.innerHTML = `
 .nav-menu {
   display: flex;
   list-style-type: none;
+  padding:0;
 }
 
 .nav-menu li {
-  margin-left: 25px;
+  margin-right: 25px;
   position: relative;
 }
 
@@ -101,6 +109,7 @@ headerTemplate.innerHTML = `
   background-color:#f9f9f9;
 }
 
+
 @media screen and (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -135,12 +144,12 @@ headerTemplate.innerHTML = `
     <header class="header">
       <div class="header-container">
         <a href="/" class="logo">
-          <img src="/api/placeholder/200/80" alt="Fishbowl Logo" />
+          <img src="imgs/wishwashi.gif" alt="Fishbowl Logo" />
         </a>
         
         <button class="nav-toggle" id="navToggle">☰</button>
         
-        <ul class="nav-menu" id="navMenu">
+        <ul class="nav-menu center" id="navMenu">
           <li class="dropdown">
             <a href="#">Projects</a>
             <div class="dropdown-content">
@@ -154,17 +163,14 @@ headerTemplate.innerHTML = `
     </header>
     `;
 
-
 class Header extends HTMLElement {
-    constructor()
-    {
-        super();
-    }
-    connectedCallback() {
-        const shadowRoot = this.attachShadow({mode:'closed'});
-        shadowRoot.appendChild(headerTemplate.content);
-    }
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    const shadowRoot = this.attachShadow({ mode: "closed" });
+    shadowRoot.appendChild(headerTemplate.content);
+  }
 }
 
-customElements.define('header-component',Header);
-
+customElements.define("header-component", Header);
