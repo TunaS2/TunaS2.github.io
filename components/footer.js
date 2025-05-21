@@ -13,6 +13,10 @@ footerTemplate.innerHTML = `
           font-family: "Audiowide", sans-serif;
           font-weight: 400;
           font-style: normal;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
         }
         ul li {
           list-style: none;
