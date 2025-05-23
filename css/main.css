@@ -7,18 +7,17 @@
   font-family: "Almost Textual";
   src: url();
 }
-main {
-  background-color: rgb(11, 11, 11);
+body {
+  background-color: transparent;
 }
-main img {
-  min-height: 100%;
-  min-width: 1024px;
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
+main {
+  height: 100vh;
+  /* margin-top: -83px; */
+}
+.bg {
+  background: url("../imgs/@tvchany_.gif") no-repeat center;
+  background-size: cover;
+  height: 100%;
 }
 
 @media screen and (max-width: 1024px) {

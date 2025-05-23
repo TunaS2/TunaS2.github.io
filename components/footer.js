@@ -13,10 +13,11 @@ footerTemplate.innerHTML = `
           font-family: "Audiowide", sans-serif;
           font-weight: 400;
           font-style: normal;
-          position: absolute;
           bottom: 0;
           left: 0;
           width: 100%;
+          position: relative;
+          margin-top: -60px;
         }
         ul li {
           list-style: none;
@@ -51,8 +52,8 @@ footerTemplate.innerHTML = `
       <footer>
         <p> &#169; 2025 </p>
         <ul class="social-row">
-          <li><a href="#"><img src="imgs/github2.png"></a></li>
-          <li><a href="#"><img src="imgs/linkedin.png"></a></li>
+          <li><a href="https://github.com/TunaS2"><img src="imgs/github2.png"></a></li>
+          <li><a href="https://www.linkedin.com/in/tuan-nguyen-656a48249/"><img src="imgs/linkedin.png"></a></li>
         </ul>
       </footer>
     `;

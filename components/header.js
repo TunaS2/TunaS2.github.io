@@ -5,8 +5,8 @@ headerTemplate.innerHTML = `
 .header {
   width: 100%;
   background:rgba(62, 8, 95, 0.23) ;
-  box-shadow: 0 2px 10px rgba(155, 39, 190, 0.47);
-  position: sticky;
+  box-shadow: 0 2px 10px rgba(155, 39, 190, 0.69);
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -122,12 +122,13 @@ headerTemplate.innerHTML = `
     top: 70px;
     left: 0;
     width: 100%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.72);
     padding: 20px;
   }
   
   .nav-menu.active {
     display: flex;
+    align-items: center;
   }
   
   .nav-menu li {
@@ -150,14 +151,14 @@ headerTemplate.innerHTML = `
         <button class="nav-toggle" id="navToggle">☰</button>
         
         <ul class="nav-menu center" id="navMenu">
+          <li><a href="/">Projects</a></li>
           <li class="dropdown">
-            <a href="#">Projects</a>
+            <a href="hobby.html">Hobby</a>
             <div class="dropdown-content">
               <a href="routine.html"> Routine Roulette</a>
-              <a href="todo.html"> Tracker Overlay</a>
+              <a href="pastime.html"> Pastime</a>
             </div>
           </li>
-          <li><a href="hobby.html">Hobby List</a></li>
         </ul>
       </div>
     </header>
@@ -170,6 +171,13 @@ class Header extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "closed" });
     shadowRoot.appendChild(headerTemplate.content);
+    const navToggle = shadowRoot.querySelector("#navToggle");
+    const navMenu = shadowRoot.querySelector("#navMenu");
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    }
   }
 }
 
