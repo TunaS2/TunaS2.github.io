@@ -50,7 +50,7 @@ footerTemplate.innerHTML = `
         }
       </style>
       <footer>
-        <p> &#169; 2025 </p>
+        <p> &#169; 2025 Tuan Nguyen </p>
         <ul class="social-row">
           <li><a href="https://github.com/TunaS2"><img src="imgs/github2.png"></a></li>
           <li><a href="https://www.linkedin.com/in/tuan-nguyen-656a48249/"><img src="imgs/linkedin.png"></a></li>

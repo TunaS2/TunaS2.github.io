@@ -3,26 +3,112 @@
   padding: 0;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: "Almost Textual";
-  src: url();
-}
 body {
   background-color: transparent;
+  overflow: hidden;
+  font-family: "Audiowide", sans-serif;
 }
 main {
   height: 100vh;
-  /* margin-top: -83px; */
+  position: relative;
 }
 .bg {
   background: url("../imgs/@tvchany_.gif") no-repeat center;
   background-size: cover;
   height: 100%;
 }
+.center-box {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: rgba(232, 223, 223, 0.902);
+  border: 2px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 10 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 100;
+  text-align: center;
+}
 
 @media screen and (max-width: 1024px) {
   main img {
     left: 50%;
     margin-left: -512px;
+  }
+}
+.top-lane {
+  top: 10%;
+}
+.bot-lane {
+  top: 75%;
+}
+.mid-lane {
+  top: 25%;
+}
+.floating {
+  position: absolute;
+  white-space: nowrap;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.floating:hover {
+  transform: scale(1.2);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+a.floating {
+  text-decoration: none;
+}
+a.floating:hover {
+  text-decoration: none;
+}
+.size-large {
+  font-size: 3rem;
+}
+.move-left-top {
+  animation: moveLeftTop 15s linear infinite;
+}
+
+.move-left-bot {
+  animation: moveLeftBot 13s linear infinite;
+}
+
+@keyframes moveLeftTop {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    right: calc(100vw + 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes moveLeftBot {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    right: calc(100vw + 100px);
+    opacity: 0;
   }
 }
