@@ -8,7 +8,7 @@
     <title>Fishbowl</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="" />
-    <script src="scripts/main.js" type="text/javascript" defer></script>
+    <script src="scripts/main.js" type="text/javascript"></script>
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +25,76 @@
       <section class="center-box">
         <h1>hello! i'm tuan</h1>
         <p>developer (learning)</p>
-        <button>about</button>
-        <button>skills</button>
+        <div class="button-container">
+          <button class="main-button" onclick="openPopup('aboutPopup')">
+            about
+          </button>
+          <button class="main-button" onclick="openPopup('aboutSkill')">
+            skill
+          </button>
+          <button class="main-button" onclick="openPopup('aboutContact')">
+            contact
+          </button>
+        </div>
+      </section>
+      <section class="popup" id="aboutPopup">
+        <div class="popup-header">
+          <h2>About Me</h2>
+          <span class="close" onclick="closePopup('aboutPopup')">&times;</span>
+        </div>
+        <div class="popup-content">
+          <p>i'm tuan, but most call me tuna.</p>
+          <p>
+            currently, i'm on a journey to become a software dev through doing
+            projects
+          </p>
+          <ul>
+            <li>Object detection</li>
+            <li>Augmented reality app</li>
+            <li>Personal website <--- I am here</li>
+            <li>Tasklist overlays</li>
+            <li>Gacha Simulator</li>
+          </ul>
+          <article class="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Computer Engineering</p>
+          </article>
+          <article class="languages">
+            <h2>Languages</h2>
+            <p>English, Vietnamese</p>
+          </article>
+        </div>
+      </section>
+      <section class="popup" id="aboutSkill">
+        <div class="popup-header">
+          <h2>Skills</h2>
+          <span class="close" onclick="closePopup('aboutSkill')">&times;</span>
+        </div>
+        <div class="popup-content">
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+      </section>
+      <section class="popup" id="aboutContact">
+        <div class="popup-header">
+          <h2>Contact</h2>
+          <span class="close" onclick="closePopup('aboutContact')"
+            >&times;</span
+          >
+        </div>
+        <div class="popup-content">
+          <p>Feel free to reach out to me via:</p>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:tnguyen014@outlook.com">tnguyen014@outlook.com</a>
+            </li>
+          </ul>
+        </div>
       </section>
       <a
         href="/"
