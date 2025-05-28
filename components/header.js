@@ -153,10 +153,10 @@ headerTemplate.innerHTML = `
         <ul class="nav-menu center" id="navMenu">
           <li><a href="/">Projects</a></li>
           <li class="dropdown">
-            <a href="hobby.html">Hobby</a>
+            <a href="/">Hobby</a>
             <div class="dropdown-content">
-              <a href="routine.html"> Routine Roulette</a>
-              <a href="pastime.html"> Pastime</a>
+              <a href="/"> Routine Roulette</a>
+              <a href="/"> Pastime</a>
             </div>
           </li>
         </ul>

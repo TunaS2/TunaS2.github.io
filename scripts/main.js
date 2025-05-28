@@ -11,16 +11,30 @@ function openPopup(popupId) {
   const popup = document.getElementById(popupId);
   popup.classList.add("active");
   activePopup = popupId;
-
-  // Center the popup on screen
-  const rect = popup.getBoundingClientRect();
-  popup.style.left = (window.innerWidth - rect.width) / 2 + "px";
-  popup.style.top = (window.innerHeight - rect.height) / 2 + "px";
+  if (window.innerWidth < 768) {
+    const rect = popup.getBoundingClientRect();
+    popup.style.left = 0 + "px";
+    popup.style.top = 80 + "px";
+  } else {
+    // Center the popup on screen
+    const rect = popup.getBoundingClientRect();
+    popup.style.left = (window.innerWidth - rect.width) / 2 + "px";
+    popup.style.top = (window.innerHeight - rect.height) / 2 + "px";
+  }
 }
 
 function closePopup(popupId) {
   const popup = document.getElementById(popupId);
-  popup.classList.remove("active");
+  if (window.innerWidth < 768) {
+    // Add slide-out class
+    popup.classList.add("slide-out");
+    popup.addEventListener("animationend", function handler() {
+      popup.classList.remove("active", "slide-out");
+      popup.removeEventListener("animationend", handler);
+    });
+  } else {
+    popup.classList.remove("active");
+  }
   if (activePopup === popupId) {
     activePopup = null;
   }

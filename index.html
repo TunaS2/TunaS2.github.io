@@ -25,22 +25,29 @@
       <section class="center-box">
         <h1>hello! i'm tuan</h1>
         <p>developer (learning)</p>
+        <p>gacha enthusiast</p>
         <div class="button-container">
           <button class="main-button" onclick="openPopup('aboutPopup')">
-            about
+            <img src="imgs/information-board.png" alt="about icon" />
+            <figcaption class="caption">about</figcaption>
           </button>
-          <button class="main-button" onclick="openPopup('aboutSkill')">
-            skill
+          <button class="main-button" onclick="openPopup('skillPopup')">
+            <img src="imgs/software.png" alt="skills icon" />
+            <figcaption class="caption">skills</figcaption>
           </button>
-          <button class="main-button" onclick="openPopup('aboutContact')">
-            contact
+          <button class="main-button" onclick="openPopup('contactPopup')">
+            <img src="imgs/email.png" alt="contact icon" />
+            <figcaption class="caption">contact</figcaption>
           </button>
         </div>
       </section>
       <section class="popup" id="aboutPopup">
         <div class="popup-header">
           <h2>About Me</h2>
-          <span class="close" onclick="closePopup('aboutPopup')">&times;</span>
+          <span class="close" onclick="closePopup('aboutPopup')">x</span>
+          <span class="close-mobile" onclick="closePopup('aboutPopup')"
+            >&#171;</span
+          >
         </div>
         <div class="popup-content">
           <p>i'm tuan, but most call me tuna.</p>
@@ -65,10 +72,13 @@
           </article>
         </div>
       </section>
-      <section class="popup" id="aboutSkill">
+      <section class="popup" id="skillPopup">
         <div class="popup-header">
           <h2>Skills</h2>
-          <span class="close" onclick="closePopup('aboutSkill')">&times;</span>
+          <span class="close" onclick="closePopup('skillPopup')">x</span>
+          <span class="close-mobile" onclick="closePopup('skillPopup')"
+            >&#171;</span
+          >
         </div>
         <div class="popup-content">
           <ul>
@@ -79,11 +89,12 @@
           </ul>
         </div>
       </section>
-      <section class="popup" id="aboutContact">
+      <section class="popup" id="contactPopup">
         <div class="popup-header">
           <h2>Contact</h2>
-          <span class="close" onclick="closePopup('aboutContact')"
-            >&times;</span
+          <span class="close" onclick="closePopup('contactPopup')">x</span>
+          <span class="close-mobile" onclick="closePopup('contactPopup')"
+            >&#171;</span
           >
         </div>
         <div class="popup-content">
@@ -96,27 +107,29 @@
           </ul>
         </div>
       </section>
-      <a
-        href="/"
-        class="floating move-left-top top-lane size-large"
-        style="animation-delay: -3s"
-      >
-        Projects</a
-      >
-      <a
-        href="/"
-        class="floating move-left-bot bot-lane size-large"
-        style="animation-delay: -2s"
-      >
-        Restless?</a
-      >
-      <a
-        href="/"
-        class="floating move-left-top mid-lane size-large"
-        style="animation-delay: 0s"
-      >
-        Bored?</a
-      >
+      <section class="float-wrapper">
+        <a
+          href="/"
+          class="floating move-left-top top-lane size-large"
+          style="animation-delay: -3s"
+        >
+          Projects</a
+        >
+        <a
+          href="/"
+          class="floating move-left-bot bot-lane size-large"
+          style="animation-delay: -2s"
+        >
+          Restless?</a
+        >
+        <a
+          href="/"
+          class="floating move-left-top mid-lane size-large"
+          style="animation-delay: 0s"
+        >
+          Bored?</a
+        >
+      </section>
     </main>
     <footer-component></footer-component>
   </body>
