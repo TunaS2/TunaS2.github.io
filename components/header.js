@@ -4,8 +4,8 @@ headerTemplate.innerHTML = `
 
 .header {
   width: 100%;
-  background:rgba(62, 8, 95, 0.23) ;
-  box-shadow: 0 2px 10px rgba(155, 39, 190, 0.69);
+  background:rgba(0, 0, 0, 0.23) ;
+  box-shadow: 0 2px 10px rgba(249, 246, 199, 0.49);
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +61,7 @@ headerTemplate.innerHTML = `
 
 .nav-menu a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(249, 246, 199);
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -85,7 +85,7 @@ headerTemplate.innerHTML = `
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.23);
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   z-index: 1;
@@ -119,11 +119,12 @@ headerTemplate.innerHTML = `
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.72);
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.23);
   }
   
   .nav-menu.active {
@@ -139,6 +140,7 @@ headerTemplate.innerHTML = `
     position: static;
     box-shadow: none;
     padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.23);
   }
 }
           </style>
@@ -155,8 +157,8 @@ headerTemplate.innerHTML = `
           <li class="dropdown">
             <a href="/">Hobby</a>
             <div class="dropdown-content">
-              <a href="/"> Routine Roulette</a>
-              <a href="/"> Pastime</a>
+              <a href="/routine.html"> Routine Roulette</a>
+              <a href="/pastime.html"> Pastime</a>
             </div>
           </li>
         </ul>

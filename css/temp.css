@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: transparent;
+  overflow: hidden;
+  font-family: "Audiowide", sans-serif;
+}
+main {
+  height: 100vh;
+  position: relative;
+}

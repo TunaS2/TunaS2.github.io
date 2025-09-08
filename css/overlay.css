@@ -4,11 +4,10 @@
   box-sizing: border-box;
 }
 main {
-  height: 500vh;
+  height: 100vh;
   background-color: rgb(206, 179, 179);
 }
 
-/* Styles for the stream title */
 .title-wrapper {
   margin: 20px 0px 2px;
   display: inline-block;
@@ -20,6 +19,8 @@ main {
     border-box;
   border-radius: 4rem;
   border: 5px solid transparent;
+  position: relative;
+  top: 10%;
 }
 
 .left,
@@ -58,6 +59,8 @@ main {
     )
     border-box;
   border-radius: 1.5rem;
+  position: relative;
+  top: 10%;
 }
 
 .task-list {

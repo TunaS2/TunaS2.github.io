@@ -83,10 +83,10 @@ main {
 .popup-header {
   background: linear-gradient(
     135deg,
-    rgb(97, 42, 164) 0%,
-    rgb(164, 22, 167) 100%
+    rgba(0, 0, 0, 0.3) 0%,
+    rgb(249, 246, 199) 100%
   );
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -101,7 +101,7 @@ main {
 
 .close {
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -120,6 +120,15 @@ main {
   padding: 25px;
   line-height: 1.6;
   color: #333;
+}
+.popup-content .about-img img {
+  max-height: 180px;
+  width: auto;
+  border-radius: 100px;
+}
+#floated {
+  float: left;
+  width: 30%;
 }
 .dragging {
   opacity: 0.8;
@@ -147,7 +156,7 @@ main {
   .close-mobile {
     background: transparent;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 50px;
     cursor: pointer;
     display: flex;
@@ -163,6 +172,15 @@ main {
   }
   .popup.slide-out {
     animation: popupSlideOutLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .popup-content .about-img img {
+    border-radius: 100px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #floated {
+    float: none;
   }
 }
 
@@ -180,7 +198,7 @@ main {
   white-space: nowrap;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: white;
+  color: rgb(249, 246, 199);
   cursor: pointer;
   transition: transform 0.3s ease;
 }

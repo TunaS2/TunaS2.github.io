@@ -31,16 +31,15 @@ footerTemplate.innerHTML = `
         }
         p{
           padding-left: 20px;
+          color: rgb(249, 246, 199);
         }
         a:hover {
           padding-bottom: 5px;
           box-shadow: inset 0 -2px 0 0 #333;
         }
-
         .social-row {
           font-size: 20px;
         }
-
         .social-row li a {
           margin: 0 15px;
         }
