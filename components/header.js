@@ -157,8 +157,8 @@ headerTemplate.innerHTML = `
           <li class="dropdown">
             <a href="/">Hobby</a>
             <div class="dropdown-content">
-              <a href="/routine.html"> Routine Roulette</a>
-              <a href="/pastime.html"> Pastime</a>
+              <a href="/"> Routine Roulette</a>
+              <a href="/"> AI</a>
             </div>
           </li>
         </ul>
